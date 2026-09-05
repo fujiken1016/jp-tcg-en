@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Japanese TCG Lotteries Actually Work | JP TCG Insider</title>
+<meta name="description" content="A plain-English guide to the Japanese trading-card lottery (chusen) system: how entries work, which retailers run them, why 'no email' usually means you lost, and the traps that cost overseas buyers real money.">
+<link rel="canonical" href="https://fujiken1016.github.io/jp-tcg-en/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Japanese TCG Lotteries Actually Work">
+<meta property="og:description" content="A plain-English guide to the Japanese trading-card lottery (chusen) system, written from inside Japan.">
+<meta property="og:url" content="https://fujiken1016.github.io/jp-tcg-en/">
+<style>
+:root{
+  --gray-0:#ffffff; --gray-50:#f8f8fb; --gray-100:#f1f1f6;
+  --gray-200:#e5e5ed; --gray-400:#8b8b9f; --gray-600:#53536b;
+  --gray-800:#292939; --gray-900:#171722;
+
+  --bg:var(--gray-50); --surface:var(--gray-0); --surface-muted:var(--gray-100);
+  --text:var(--gray-800); --text-strong:var(--gray-900); --text-muted:var(--gray-600);
+  --line:var(--gray-200); --line-strong:var(--gray-400);
+  --accent:#0f5f6b; --accent-foreground:#ffffff; --focus:#0b57d0;
+
+  --fs-caption:0.8125rem; --fs-sm:0.9375rem; --fs-base:1.0625rem;
+  --fs-lead:1.1875rem; --fs-h3:1.3125rem; --fs-h2:1.625rem; --fs-h1:2.125rem;
+  --lh-body:1.85; --lh-tight:1.35; --lh-display:1.15; --lh-ui:1.4;
+
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px;
+  --sp-5:24px; --sp-6:32px; --sp-8:48px; --sp-10:64px;
+
+  --r-sm:4px; --r-md:8px;
+  --shadow-sm:0 1px 2px rgba(23,23,34,.06),0 1px 3px rgba(23,23,34,.10);
+
+  --font-sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font-sans); font-size:var(--fs-base); line-height:var(--lh-body);
+}
+.wrap{max-width:720px; margin:0 auto; padding:0 var(--sp-4)}
+header.site{background:var(--surface); border-bottom:1px solid var(--line)}
+.brand{
+  display:flex; align-items:center; min-height:48px;
+  font-size:var(--fs-sm); letter-spacing:.06em; text-transform:uppercase;
+  color:var(--accent); font-weight:700;
+}
+h1{
+  font-size:var(--fs-h1); line-height:var(--lh-display); color:var(--text-strong);
+  font-weight:700; margin:var(--sp-6) 0 var(--sp-3);
+}
+h2{
+  font-size:var(--fs-h2); line-height:var(--lh-tight); color:var(--text-strong);
+  font-weight:700; margin:var(--sp-8) 0 var(--sp-3);
+}
+h3{
+  font-size:var(--fs-h3); line-height:var(--lh-tight); color:var(--text-strong);
+  font-weight:700; margin:var(--sp-6) 0 var(--sp-3);
+}
+p,ul,ol{margin:0 0 var(--sp-4)}
+ul,ol{padding-left:1.35em}
+li{margin:0 0 var(--sp-2)}
+.lead{font-size:var(--fs-lead); color:var(--text)}
+.meta{font-size:var(--fs-sm); color:var(--text-muted); margin:0 0 var(--sp-5)}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--focus); outline-offset:2px; border-radius:var(--r-sm)}
+.toc{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md);
+  padding:var(--sp-4); margin:0 0 var(--sp-8); box-shadow:var(--shadow-sm);
+}
+.toc p{font-size:var(--fs-sm); color:var(--text-muted); margin:0 0 var(--sp-2)}
+.toc ol{margin:0; padding-left:1.35em}
+.toc li{margin:0}
+.toc a{display:flex; align-items:center; min-height:48px; text-decoration:underline}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--accent);
+  border-radius:var(--r-md); padding:var(--sp-4); margin:0 0 var(--sp-4);
+}
+.card p:last-child{margin-bottom:0}
+.card .label{
+  display:block; font-size:var(--fs-sm); font-weight:700; color:var(--accent);
+  margin:0 0 var(--sp-2); letter-spacing:.02em;
+}
+.tablewrap{overflow-x:auto; margin:0 0 var(--sp-5); -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; min-width:520px; background:var(--surface); font-size:var(--fs-sm)}
+th,td{border:1px solid var(--line); padding:var(--sp-3); text-align:left; vertical-align:top; line-height:var(--lh-ui)}
+th{background:var(--surface-muted); color:var(--text-strong); font-weight:700}
+footer.site{
+  border-top:1px solid var(--line); margin-top:var(--sp-10);
+  padding:var(--sp-5) 0 var(--sp-8); color:var(--text-muted); font-size:var(--fs-sm);
+}
+footer.site p{margin:0 0 var(--sp-3)}
+.updated{font-size:var(--fs-caption); color:var(--text-muted)}
+@media (min-width:760px){
+  h1{font-size:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap"><div class="brand">JP TCG Insider</div></div>
+</header>
+
+<main class="wrap">
+
+<h1>How Japanese TCG Lotteries Actually Work</h1>
+
+<p class="meta">Written from inside Japan. No affiliate links on this page.</p>
+
+<p class="lead">If you collect Pok&eacute;mon, One&nbsp;Piece, Yu-Gi-Oh!, Lorcana or MTG and you have ever wondered why Japanese sealed product is either <em>at retail</em> or <em>at triple retail</em> with nothing in between &mdash; this is the missing piece. Most high-demand Japanese product is not sold first-come. It is sold by <strong>lottery</strong>, and the lottery has rules that are almost never written down in English.</p>
+
+<div class="toc">
+  <p>On this page</p>
+  <ol>
+    <li><a href="#what">What a Japanese lottery actually is</a></li>
+    <li><a href="#where">Where the lotteries run</a></li>
+    <li><a href="#silence">Why silence means you lost</a></li>
+    <li><a href="#trap">The trap that costs people the most</a></li>
+    <li><a href="#mto">Made-to-order is a different animal</a></li>
+    <li><a href="#overseas">What this means if you are outside Japan</a></li>
+  </ol>
+</div>
+
+<h2 id="what">1. What a Japanese lottery actually is</h2>
+
+<p>The Japanese word is <strong>抽選 (ch&#363;sen)</strong>. It is not a raffle you pay to enter, and it is not a preorder queue. It is a free application window: you apply, and later you are told whether you have earned <em>the right to buy the item at its normal retail price</em>.</p>
+
+<p>Three things follow from that, and all three surprise people:</p>
+
+<ul>
+  <li><strong>Applying costs nothing and losing costs nothing.</strong> There is no downside to entering every window you are eligible for. Japanese collectors enter dozens.</li>
+  <li><strong>Winning is an obligation, not a prize.</strong> You are expected to complete the purchase, and for in-store lotteries, to physically collect within a stated window &mdash; often only a few days.</li>
+  <li><strong>The price is retail.</strong> The lottery exists precisely because retail is far below the secondary market. That gap is the whole reason the system exists.</li>
+</ul>
+
+<p>Each retailer runs its own window, on its own schedule, with its own account requirements. There is no central calendar. That fragmentation &mdash; not the odds &mdash; is the real barrier.</p>
+
+<h2 id="where">2. Where the lotteries run</h2>
+
+<p>Japanese sealed product does not funnel through one or two channels the way it tends to in the US. In practice the windows are spread across at least four different <em>kinds</em> of seller, and each kind behaves differently.</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Channel type</th><th>Typical examples</th><th>How you are usually told</th><th>Collection</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ticketing platforms used for store lotteries</td>
+      <td>LivePocket and similar event-ticket systems</td>
+      <td>Email, plus an application-history page in your account</td>
+      <td>Usually in-store, on a fixed date range</td>
+    </tr>
+    <tr>
+      <td>Manufacturer direct / official stores</td>
+      <td>Premium Bandai, Pok&eacute;mon Center Online, Konami Style</td>
+      <td>Account page. Email is <strong>not</strong> guaranteed</td>
+      <td>Shipped</td>
+    </tr>
+    <tr>
+      <td>Large retail chains</td>
+      <td>Electronics, supermarket and bookstore chains, plus their apps</td>
+      <td>Email or in-app notice, chain by chain</td>
+      <td>Mixed: some ship, many are store pickup only</td>
+    </tr>
+    <tr>
+      <td>Convenience stores and rental/game chains</td>
+      <td>Konbini apps, used-media chains</td>
+      <td>App notification, often winners only</td>
+      <td>Store pickup</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The practical consequence: <strong>there is no single inbox that tells you what you won.</strong> Anyone treating email as their source of truth will lose product they actually won.</p>
+
+<h2 id="silence">3. Why silence means you lost</h2>
+
+<p>A large share of Japanese lotteries follow a convention stated in the fine print as <em>&ldquo;当選者のみ&rdquo;</em> &mdash; winners only will be contacted. There is no loss notification. There is no &ldquo;better luck next time&rdquo; email.</p>
+
+<div class="card">
+  <span class="label">Rule of thumb</span>
+  <p>Write down the announced result date for every entry. If the date passes and nothing has arrived, treat it as a loss and close the entry. Waiting for a confirmation that is never coming is how people end up with a backlog of entries they can no longer reconstruct.</p>
+</div>
+
+<p>This is also why an entry log matters more than it sounds like it should. Once you are running twenty or thirty open applications across a dozen accounts, memory stops working, and the retailers are not going to reconcile it for you.</p>
+
+<h2 id="trap">4. The trap that costs people the most</h2>
+
+<p>Here is the specific failure I hit myself, and it is the single most useful thing on this page.</p>
+
+<div class="card">
+  <span class="label">Manufacturer-direct lotteries can send you nothing at all</span>
+  <p>On at least one major manufacturer-direct store, I received <strong>neither an entry confirmation nor a result notification</strong> &mdash; not for the win, and not for the loss. The only reliable source of truth was the lottery-status page inside my own account.</p>
+  <p>When I finally checked that page directly instead of my inbox, there were <strong>seven finished lotteries</strong> sitting there whose results I had never seen. All losses in that case &mdash; but the same blind spot would have silently swallowed a win.</p>
+</div>
+
+<p>So the working rule is: <strong>for manufacturer-direct stores, open the account&rsquo;s lottery-status page on a schedule.</strong> Do not wait to be told. Email-based reconciliation is sufficient for ticketing platforms and most chains; it is <em>not</em> sufficient here.</p>
+
+<p>A second, smaller version of the same lesson: on ticketing platforms, read your application-history page rather than opening each confirmation mail one at a time. The history page is faster, and it is often the only place that shows the <strong>cancellation deadline</strong> &mdash; which matters if you win something you can no longer collect.</p>
+
+<h2 id="mto">5. Made-to-order is a different animal</h2>
+
+<p>Alongside lotteries, Japan uses <strong>受注生産 (juchu seisan)</strong> &mdash; made-to-order runs. The order window is open for a fixed period, often very short, and <em>everyone who orders gets one</em>. There is no losing.</p>
+
+<p>That sounds strictly better, and for availability it is. Two costs are easy to miss:</p>
+
+<ul>
+  <li><strong>The window is brutally short.</strong> Twenty-four hours is a common format. If you find out the next day, it is over.</li>
+  <li><strong>Delivery can be a year or more out.</strong> Some collaboration and made-to-order products ship in the following calendar year. Your money, or at least your card authorisation, may be committed long before the box exists.</li>
+</ul>
+
+<p>Because supply is unlimited within the window, made-to-order items also behave differently on the secondary market than lottery items do. Scarcity is the thing being sold in a lottery; in a made-to-order run, it is not being sold at all.</p>
+
+<h2 id="overseas">6. What this means if you are outside Japan</h2>
+
+<p>Most of these windows are not realistically enterable from abroad, and it is worth being precise about <em>why</em>, because the reasons are different and only some of them can be worked around.</p>
+
+<ul>
+  <li><strong>Account requirements.</strong> Many entries require a Japanese address and phone number on a verified account. Some also require prior purchase history or paid membership at that specific retailer.</li>
+  <li><strong>In-store collection.</strong> A large fraction of chain lotteries are pickup-only at a named branch, inside a short window. No proxy service can fix a lottery that was never shippable.</li>
+  <li><strong>Language and timing.</strong> Windows open and close on Japan time and are announced in Japanese, frequently with only a few days&rsquo; notice.</li>
+  <li><strong>Social conditions.</strong> Some store lotteries require following or reposting from a specific Japanese social account, which effectively requires an account that looks lived-in.</li>
+</ul>
+
+<p>The honest summary: the shippable, manufacturer-direct and online-chain windows are the ones a proxy arrangement can realistically serve. The store-pickup ones are structurally closed to you, and no amount of paying a service changes that.</p>
+
+<p>If someone offers to &ldquo;enter Japanese lotteries on your behalf&rdquo; for a fee, the first question worth asking is which of the four channel types above they actually mean &mdash; because the answer determines whether they are selling you access or selling you a queue position that does not exist.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>JP TCG Insider &mdash; independent notes on the Japanese trading-card market, written in English from Japan. Personal project, run by Fujiken. Not affiliated with, endorsed by, or speaking for any retailer, publisher or manufacturer named on this page.</p>
+    <p>No affiliate links and no advertising appear on this page. Retailer names are used descriptively; all trademarks belong to their owners. Nothing here is investment advice.</p>
+    <p class="updated">Last updated: 5 September 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
