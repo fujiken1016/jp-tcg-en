@@ -92,6 +92,19 @@ footer.site{
 }
 footer.site p{margin:0 0 var(--sp-3)}
 .updated{font-size:var(--fs-caption); color:var(--text-muted)}
+figure.fig{margin:0 0 var(--sp-5)}
+figure.fig .figbox{
+  overflow-x:auto; -webkit-overflow-scrolling:touch; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-md); padding:var(--sp-4);
+}
+figure.fig .figbox svg{display:block; width:296px; height:auto}
+figure.fig figcaption{
+  font-size:var(--fs-sm); line-height:var(--lh-body); color:var(--text-muted); margin-top:var(--sp-2);
+}
+svg .s-t{font-size:14px; fill:var(--text-strong); font-weight:700}
+svg .s-m{font-size:14px; fill:var(--text-muted)}
+svg .s-i{font-size:14px; fill:var(--accent-foreground); font-weight:700}
+svg .s-im{font-size:14px; fill:var(--accent-foreground)}
 @media (min-width:760px){
   h1{font-size:2.5rem}
 }
@@ -139,28 +152,29 @@ footer.site p{margin:0 0 var(--sp-3)}
 
 <p>Every purchase in my ledger between 2 June and 4 September 2026 falls into one of four tiers. The tiers matter more than the individual store names, because a store&rsquo;s tier predicts how it behaves &mdash; whether it runs lotteries, how long it holds your money, and whether it cares who you are.</p>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 260" role="img" aria-labelledby="f1t f1d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 246" role="img" aria-labelledby="f1t f1d">
   <title id="f1t">Four tiers of Japanese sealed-TCG retail</title>
-  <desc id="f1d">Manufacturer-direct stores sit at the top with the tightest gates; mass-market e-commerce next; specialist hobby retail below that; the physical shelf at the bottom with no gate at all.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <rect x="24" y="20" width="652" height="48" rx="6" fill="#0f5f6b"></rect>
-    <text x="40" y="42" font-size="15" font-weight="700" fill="#ffffff">Tier 1 &mdash; Manufacturer-direct</text>
-    <text x="40" y="60" font-size="13" fill="#e5e5ed">Pok&eacute;mon Center Online / Premium Bandai / Konami Style / Takara Tomy Mall</text>
+  <desc id="f1d">Tier 1 is manufacturer-run stores, tier 2 is mass-market e-commerce, tier 3 is specialist hobby retail, and tier 4 is the physical shelf. The gate loosens from tier 1 down to tier 4.</desc>
+  <rect x="4" y="6" width="288" height="52" rx="6" fill="var(--accent)"></rect>
+  <text class="s-i" x="16" y="28">Tier 1 &#183; Maker-run</text>
+  <text class="s-im" x="16" y="48">Pok&#233;mon Center, Bandai</text>
 
-    <rect x="24" y="78" width="652" height="48" rx="6" fill="#ffffff" stroke="#8b8b9f"></rect>
-    <text x="40" y="100" font-size="15" font-weight="700" fill="#171722">Tier 2 &mdash; Mass-market e-commerce</text>
-    <text x="40" y="118" font-size="13" fill="#53536b">Amazon.co.jp (including invitation-only sales) / Rakuten and Rakuten Books</text>
+  <rect x="4" y="64" width="288" height="52" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="86">Tier 2 &#183; Mass e-commerce</text>
+  <text class="s-m" x="16" y="106">Amazon, Rakuten</text>
 
-    <rect x="24" y="136" width="652" height="48" rx="6" fill="#ffffff" stroke="#8b8b9f"></rect>
-    <text x="40" y="158" font-size="15" font-weight="700" fill="#171722">Tier 3 &mdash; Specialist hobby retail</text>
-    <text x="40" y="176" font-size="13" fill="#53536b">Card and hobby shops, anime chains, publisher-run subscriber stores</text>
+  <rect x="4" y="122" width="288" height="52" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="144">Tier 3 &#183; Specialist</text>
+  <text class="s-m" x="16" y="164">Hobby and anime shops</text>
 
-    <rect x="24" y="194" width="652" height="48" rx="6" fill="#f1f1f6" stroke="#8b8b9f"></rect>
-    <text x="40" y="216" font-size="15" font-weight="700" fill="#171722">Tier 4 &mdash; The physical shelf</text>
-    <text x="40" y="234" font-size="13" fill="#53536b">Big-box electronics and toy floors, per-person caps, no account required</text>
-  </g>
+  <rect x="4" y="180" width="288" height="52" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="202">Tier 4 &#183; The shelf</text>
+  <text class="s-m" x="16" y="222">Walk in and buy</text>
 </svg>
+</div>
+<figcaption>The gate loosens from top to bottom. The product gets scarcer and earlier from bottom to top.</figcaption>
 </figure>
 
 <h3>Why the tier predicts the behaviour</h3>
@@ -189,38 +203,28 @@ footer.site p{margin:0 0 var(--sp-3)}
 </table>
 </div>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 210" role="img" aria-labelledby="f3t f3d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
-  <title id="f3t">The five gates, from loosest to tightest</title>
-  <desc id="f3d">Nothing at all on the physical shelf, then an account, then a Japanese delivery address, then a purchase history the retailer selects on, then a verified identity.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <text x="24" y="28" font-size="13" fill="#53536b">What the channel makes you prove &mdash; loosest at the left</text>
-    <rect x="24" y="44" width="120" height="60" rx="6" fill="#f1f1f6" stroke="#8b8b9f"></rect>
-    <text x="36" y="70" font-size="13" font-weight="700" fill="#171722">Nothing</text>
-    <text x="36" y="90" font-size="12" fill="#53536b">The shelf</text>
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 216" role="img" aria-labelledby="f3t f3d">
+  <title id="f3t">Five gates, from loosest to tightest</title>
+  <desc id="f3d">Nothing at all on the shelf, then an account, then a Japanese address, then a purchase history the retailer selects on, then a verified identity.</desc>
+  <rect x="4" y="6" width="288" height="36" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="29">Nothing &#183; the shelf</text>
 
-    <rect x="156" y="44" width="120" height="60" rx="6" fill="#ffffff" stroke="#8b8b9f"></rect>
-    <text x="168" y="70" font-size="13" font-weight="700" fill="#171722">An account</text>
-    <text x="168" y="90" font-size="12" fill="#53536b">Most of Tier 3</text>
+  <rect x="4" y="48" width="288" height="36" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="71">An account</text>
 
-    <rect x="288" y="44" width="120" height="60" rx="6" fill="#ffffff" stroke="#8b8b9f"></rect>
-    <text x="300" y="70" font-size="13" font-weight="700" fill="#171722">A JP address</text>
-    <text x="300" y="90" font-size="12" fill="#53536b">Tier 1 and 2</text>
+  <rect x="4" y="90" width="288" height="36" rx="6" fill="var(--bg)" stroke="var(--line-strong)"></rect>
+  <text class="s-t" x="16" y="113">A Japanese address</text>
 
-    <rect x="420" y="44" width="120" height="60" rx="6" fill="#0f5f6b"></rect>
-    <text x="432" y="70" font-size="13" font-weight="700" fill="#ffffff">A history</text>
-    <text x="432" y="90" font-size="12" fill="#e5e5ed">Invitation sales</text>
+  <rect x="4" y="132" width="288" height="36" rx="6" fill="var(--accent)"></rect>
+  <text class="s-i" x="16" y="155">A purchase history</text>
 
-    <rect x="552" y="44" width="124" height="60" rx="6" fill="#0f5f6b"></rect>
-    <text x="564" y="70" font-size="13" font-weight="700" fill="#ffffff">An identity</text>
-    <text x="564" y="90" font-size="12" fill="#e5e5ed">Verified tiers</text>
-
-    <line x1="24" y1="130" x2="676" y2="130" stroke="#8b8b9f" stroke-width="2"></line>
-    <text x="24" y="156" font-size="13" fill="#53536b">Open to anyone standing in the store</text>
-    <text x="676" y="156" font-size="13" fill="#53536b" text-anchor="end">Effectively residency-gated</text>
-    <text x="24" y="184" font-size="13" fill="#171722">Money buys you movement along this line only up to the third box. After that it does not.</text>
-  </g>
+  <rect x="4" y="174" width="288" height="36" rx="6" fill="var(--accent)"></rect>
+  <text class="s-i" x="16" y="197">A verified identity</text>
 </svg>
+</div>
+<figcaption>Money moves you down this list only as far as the third row. The last two it cannot buy.</figcaption>
 </figure>
 
 <p>Two of those rows deserve a footnote from the companion log: my wins came through the verified allocation rather than the open pool (<a href="./lottery-odds.html#platforms">which platforms actually reported results</a>), and one of the Tier 1 stores above is among the <a href="./lottery-odds.html#silence">three that never tell you when you have lost</a>.</p>
@@ -243,28 +247,25 @@ footer.site p{margin:0 0 var(--sp-3)}
   <li><strong>28 August 2026</strong> &mdash; invitation email at 22:13 JST, order placed at 23:35 JST. About eighty minutes, and it still went through.</li>
 </ul>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 180" role="img" aria-labelledby="f4t f4d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 176" role="img" aria-labelledby="f4t f4d">
   <title id="f4t">Two invitation sales, email to order</title>
-  <desc id="f4d">On 26 August the invitation arrived at 14:15 and the order was placed at 14:16. On 28 August the invitation arrived at 22:13 and the order was placed at 23:35, about eighty minutes later, and still went through.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <text x="24" y="30" font-size="13" fill="#53536b">Invitation email to completed order</text>
+  <desc id="f4d">On 26 August the invitation email arrived at 14:15 and the order was placed at 14:16. On 28 August the email arrived at 22:13 and the order was placed at 23:35, and it still went through.</desc>
+  <text class="s-t" x="4" y="24">26 Aug 2026</text>
+  <text class="s-m" x="4" y="46">14:15 email</text>
+  <line x1="120" y1="41" x2="150" y2="41" stroke="var(--accent)" stroke-width="4"></line>
+  <text class="s-t" x="160" y="46">1 minute</text>
 
-    <text x="24" y="64" font-size="14" fill="#171722">26 Aug 2026</text>
-    <circle cx="150" cy="59" r="7" fill="#0f5f6b"></circle>
-    <text x="150" y="86" font-size="12" fill="#53536b" text-anchor="middle">14:15 email</text>
-    <line x1="157" y1="59" x2="176" y2="59" stroke="#0f5f6b" stroke-width="3"></line>
-    <circle cx="183" cy="59" r="7" fill="#0f5f6b"></circle>
-    <text x="200" y="64" font-size="14" font-weight="700" fill="#171722">14:16 ordered &mdash; one minute</text>
+  <text class="s-t" x="4" y="104">28 Aug 2026</text>
+  <text class="s-m" x="4" y="126">22:13 email</text>
+  <line x1="120" y1="121" x2="180" y2="121" stroke="var(--accent)" stroke-width="4"></line>
+  <text class="s-t" x="190" y="126">82 min</text>
 
-    <text x="24" y="130" font-size="14" fill="#171722">28 Aug 2026</text>
-    <circle cx="150" cy="125" r="7" fill="#0f5f6b"></circle>
-    <text x="150" y="152" font-size="12" fill="#53536b" text-anchor="middle">22:13 email</text>
-    <line x1="157" y1="125" x2="437" y2="125" stroke="#0f5f6b" stroke-width="3"></line>
-    <circle cx="444" cy="125" r="7" fill="#0f5f6b"></circle>
-    <text x="461" y="130" font-size="14" font-weight="700" fill="#171722">23:35 ordered &mdash; 82 minutes</text>
-  </g>
+  <text class="s-m" x="4" y="164">Both cleared at list price.</text>
 </svg>
+</div>
+<figcaption>Two confirmed invitation sales in my ledger, both One Piece boxes, both at roughly list price.</figcaption>
 </figure>
 
 <p>Two data points are not a rule, and I cannot tell you how accounts are selected &mdash; Amazon does not publish that, and I am not going to guess at it in public. What the two instances do establish is that the channel is real, that it clears at list price rather than at a market price, and that it is invisible to anyone browsing the site. You cannot search your way into it. If you are buying through a friend or a forwarding service in Japan, this is a channel their account may have and yours never will.</p>
@@ -273,29 +274,29 @@ footer.site p{margin:0 0 var(--sp-3)}
 
 <p>The single most under-reported thing about buying sealed product in Japan is how far apart the deadlines sit. Four real ones from my own ledger, drawn to the same scale:</p>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 300" role="img" aria-labelledby="f2t f2d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
-  <title id="f2t">Four purchase clocks, from one minute to seventeen months</title>
-  <desc id="f2d">An Amazon invitation order took one minute. A lottery payment deadline was four days. A manufacturer-direct preorder was scheduled about six months out. A retailer preorder was scheduled for some time within the following year.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <text x="24" y="30" font-size="13" fill="#53536b">Time your money or your attention is committed (log scale)</text>
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 246" role="img" aria-labelledby="f2t f2d">
+  <title id="f2t">Four purchase clocks, from one minute to 2027</title>
+  <desc id="f2d">An invitation order took one minute. A payment deadline after a lottery win was four days. A manufacturer-direct preorder was scheduled about six months out. A retailer preorder was scheduled for some time within 2027.</desc>
+  <text class="s-t" x="4" y="22">Invitation window</text>
+  <rect x="4" y="30" width="10" height="16" rx="3" fill="var(--accent)"></rect>
+  <text class="s-m" x="24" y="44">1 minute</text>
 
-    <text x="24" y="72" font-size="14" fill="#171722">Amazon invitation window</text>
-    <rect x="24" y="82" width="34" height="22" rx="4" fill="#0f5f6b"></rect>
-    <text x="68" y="98" font-size="14" font-weight="700" fill="#171722">1 minute</text>
+  <text class="s-t" x="4" y="84">Pay after a win</text>
+  <rect x="4" y="92" width="70" height="16" rx="3" fill="var(--accent)"></rect>
+  <text class="s-m" x="84" y="106">4 days</text>
 
-    <text x="24" y="140" font-size="14" fill="#171722">Payment deadline after a lottery win</text>
-    <rect x="24" y="150" width="190" height="22" rx="4" fill="#0f5f6b"></rect>
-    <text x="224" y="166" font-size="14" font-weight="700" fill="#171722">4 days</text>
+  <text class="s-t" x="4" y="146">Maker preorder</text>
+  <rect x="4" y="154" width="150" height="16" rx="3" fill="var(--line-strong)"></rect>
+  <text class="s-m" x="164" y="168">about 6 months</text>
 
-    <text x="24" y="208" font-size="14" fill="#171722">Manufacturer-direct preorder</text>
-    <rect x="24" y="218" width="420" height="22" rx="4" fill="#8b8b9f"></rect>
-    <text x="454" y="234" font-size="14" font-weight="700" fill="#171722">about 6 months</text>
-
-    <text x="24" y="276" font-size="14" fill="#171722">Retailer preorder, scheduled &ldquo;within 2027&rdquo;</text>
-    <rect x="24" y="286" width="600" height="10" rx="4" fill="#8b8b9f"></rect>
-  </g>
+  <text class="s-t" x="4" y="208">Retailer preorder</text>
+  <rect x="4" y="216" width="230" height="16" rx="3" fill="var(--line-strong)"></rect>
+  <text class="s-m" x="4" y="242">scheduled &#8220;within 2027&#8221;</text>
 </svg>
+</div>
+<figcaption>Bar lengths are indicative, not to scale. The two grey bars are money already paid.</figcaption>
 </figure>
 
 <ul>
@@ -325,21 +326,23 @@ footer.site p{margin:0 0 var(--sp-3)}
   <li><strong>Geography.</strong> Stock lasts longer away from the big cities. The same product in a central Tokyo store on release week is a different situation entirely.</li>
 </ul>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 170" role="img" aria-labelledby="f5t f5d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 176" role="img" aria-labelledby="f5t f5d">
   <title id="f5t">Stock still on the shelf one week after release</title>
-  <desc id="f5d">A set released on 31 July 2026 still had loose packs on the shelf on 8 August 2026 at a big-box store outside a major metro area, under a ten-pack-per-customer cap.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <line x1="60" y1="80" x2="640" y2="80" stroke="#8b8b9f" stroke-width="2"></line>
-    <circle cx="60" cy="80" r="8" fill="#0f5f6b"></circle>
-    <text x="60" y="56" font-size="14" font-weight="700" fill="#171722" text-anchor="middle">31 Jul</text>
-    <text x="60" y="106" font-size="12" fill="#53536b" text-anchor="middle">release</text>
-    <circle cx="380" cy="80" r="8" fill="#0f5f6b"></circle>
-    <text x="380" y="56" font-size="14" font-weight="700" fill="#171722" text-anchor="middle">8 Aug</text>
-    <text x="380" y="106" font-size="12" fill="#53536b" text-anchor="middle">loose packs still on the shelf</text>
-    <text x="60" y="146" font-size="13" fill="#171722">Eight days later, at shelf price, under a cap of ten packs per customer.</text>
-  </g>
+  <desc id="f5d">A set released on 31 July 2026 still had loose packs on the shelf on 8 August 2026, under a cap of ten packs per customer.</desc>
+  <line x1="30" y1="70" x2="266" y2="70" stroke="var(--line-strong)" stroke-width="2"></line>
+  <circle cx="30" cy="70" r="7" fill="var(--accent)"></circle>
+  <circle cx="266" cy="70" r="7" fill="var(--accent)"></circle>
+  <text class="s-t" x="4" y="44">31 Jul</text>
+  <text class="s-m" x="4" y="98">release</text>
+  <text class="s-t" x="292" y="44" text-anchor="end">8 Aug</text>
+  <text class="s-m" x="292" y="98" text-anchor="end">still stocked</text>
+  <text class="s-m" x="4" y="140">Eight days later, at shelf price,</text>
+  <text class="s-m" x="4" y="164">capped at 10 packs per person.</text>
 </svg>
+</div>
+<figcaption>Not a Tokyo store on release day. A big-box floor away from the major metros, a week later.</figcaption>
 </figure>
 
 <p>The shelf is Tier 4 in the map above: the only channel with no account, no address and no verification. It is also the only one an overseas visitor can genuinely use, which makes it worth far more attention than English guides give it.</p>
@@ -370,32 +373,33 @@ footer.site p{margin:0 0 var(--sp-3)}
 
 <p>None of that is a reason not to buy from Japan. It is a reason to stop treating &ldquo;buying from Japan&rdquo; as one activity with one price. It is at least four, and they fail in different ways.</p>
 
-<figure style="margin:0 0 var(--sp-5)">
-<svg viewBox="0 0 700 330" role="img" aria-labelledby="f6t f6d" style="width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)">
-  <title id="f6t">The eight channels plotted on gate tightness against clock length</title>
-  <desc id="f6d">The physical shelf sits at loose gate and instant clock. Amazon invitation sales sit at tight gate and instant clock. Manufacturer-direct preorders sit at tight gate and long clock. Ordinary e-commerce and specialist retail sit in the middle.</desc>
-  <g font-family="Helvetica Neue, Arial, sans-serif">
-    <line x1="80" y1="270" x2="660" y2="270" stroke="#8b8b9f" stroke-width="2"></line>
-    <line x1="80" y1="40" x2="80" y2="270" stroke="#8b8b9f" stroke-width="2"></line>
-    <text x="370" y="300" font-size="13" fill="#53536b" text-anchor="middle">How long it keeps your money &rarr;</text>
-    <text x="96" y="34" font-size="13" fill="#53536b">&uarr; How much it makes you prove</text>
+<figure class="fig">
+<div class="figbox">
+<svg viewBox="0 0 296 250" role="img" aria-labelledby="f6t f6d">
+  <title id="f6t">The channels plotted on gate against clock</title>
+  <desc id="f6d">The shelf has a loose gate and an instant clock. Invitation sales have a tight gate and an instant clock. Lottery allocations have a tight gate and a short clock. Manufacturer-direct preorders have a tight gate and a long clock. Everyday e-commerce sits in the middle.</desc>
+  <line x1="30" y1="200" x2="286" y2="200" stroke="var(--line-strong)" stroke-width="2"></line>
+  <line x1="30" y1="30" x2="30" y2="200" stroke="var(--line-strong)" stroke-width="2"></line>
+  <text class="s-m" x="30" y="228">Keeps your money longer &#8594;</text>
+  <text class="s-m" x="4" y="20">&#8593; Makes you prove more</text>
 
-    <circle cx="140" cy="240" r="9" fill="#0f5f6b"></circle>
-    <text x="156" y="245" font-size="13" fill="#171722">The physical shelf</text>
+  <circle cx="60" cy="180" r="6" fill="var(--accent)"></circle>
+  <text class="s-t" x="74" y="185">Shelf</text>
 
-    <circle cx="150" cy="120" r="9" fill="#0f5f6b"></circle>
-    <text x="166" y="125" font-size="13" fill="#171722">Amazon invitation sales</text>
+  <circle cx="60" cy="90" r="6" fill="var(--accent)"></circle>
+  <text class="s-t" x="74" y="95">Invitation sales</text>
 
-    <circle cx="330" cy="200" r="9" fill="#8b8b9f"></circle>
-    <text x="346" y="205" font-size="13" fill="#171722">Ordinary e-commerce, specialist retail</text>
+  <circle cx="60" cy="50" r="6" fill="var(--accent)"></circle>
+  <text class="s-t" x="74" y="55">Lotteries</text>
 
-    <circle cx="230" cy="70" r="9" fill="#0f5f6b"></circle>
-    <text x="246" y="75" font-size="13" fill="#171722">Lottery allocations</text>
+  <circle cx="140" cy="140" r="6" fill="var(--line-strong)"></circle>
+  <text class="s-t" x="154" y="145">Everyday shops</text>
 
-    <circle cx="560" cy="90" r="9" fill="#0f5f6b"></circle>
-    <text x="546" y="60" font-size="13" fill="#171722" text-anchor="end">Manufacturer-direct preorders</text>
-  </g>
+  <circle cx="250" cy="70" r="6" fill="var(--accent)"></circle>
+  <text class="s-t" x="244" y="75" text-anchor="end">Preorders</text>
 </svg>
+</div>
+<figcaption>Positions are qualitative. The point is that the two axes are independent of price.</figcaption>
 </figure>
 
 <h2 id="takeaway">8. The one thing to take away</h2>
